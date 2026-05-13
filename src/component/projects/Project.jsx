@@ -54,7 +54,7 @@ const Projects = () => {
   image: LMSImage,
   tech: ["React.js", "MUI", "JavaScript", "API Integration"],
   color: "#8B5CF6",
-  github: "#",
+  github: "https://github.com/JeedaSokkar/Library-Management-System.git",
   live: "#",
 },
 {
@@ -105,22 +105,33 @@ const Projects = () => {
           }}
         >
           {projects.map((project, i) => (
-            <MotionCard
-              key={i}
-              whileHover={{ y: -6 }}
-              sx={{
-                borderRadius: 2,
-                overflow: "hidden",
-                background: "rgba(15,23,42,0.7)",
-              }}
-            >
+          <MotionCard
+  key={i}
+  whileHover={{ y: -6 }}
+  sx={{
+    borderRadius: 2,
+    overflow: "hidden",
+    background: "rgba(15,23,42,0.7)",
+    border: "1px solid rgba(255,255,255,0.08)",
+    backdropFilter: "blur(10px)",
+
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+    "&:hover": {
+  borderColor: project.color,
+  boxShadow: `0 0 30px ${project.color}33`,
+},
+  }}
+>
               {/* IMAGE */}
               <Box
                 sx={{
-                  height: 220,
-                  cursor: "pointer",
-                  overflow: "hidden",
-                }}
+    height: 220,
+    cursor: "pointer",
+    overflow: "hidden",
+    position: "relative",
+  }}
                 onClick={() => {
                   setSelectedImage(project.image);
                   setOpen(true);
@@ -136,17 +147,32 @@ const Projects = () => {
                     transition: "0.5s",
                     "&:hover": { transform: "scale(1.1)" },
                   }}
+                  
                 />
+
               </Box>
 
-              {/* CONTENT */}
-              <Box sx={{ p: 4 }}>
+            
+             <Box
+  sx={{
+    p: 4,
+    display: "flex",
+    flexDirection: "column",
+    flexGrow: 1,
+  }}
+>
                 <Typography variant="h5" sx={{ color: "#fff", mb: 1 }}>
                   {project.title}
                 </Typography>
 
-                <Typography sx={{ color: "#94A3B8", mb: 2 }}>
-                  {project.description}
+<Typography
+  sx={{
+    color: "#94A3B8",
+    mb: 2,
+    lineHeight: 1.8,
+    minHeight: 120,
+  }}
+>                  {project.description}
                 </Typography>
 
                 <Stack direction="row" flexWrap="wrap" gap={1}>
@@ -163,8 +189,14 @@ const Projects = () => {
                   ))}
                 </Stack>
 
-                {/* <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
-                  <Button
+<Stack
+  direction="row"
+  spacing={2}
+  sx={{
+    mt: "auto",
+    pt: 3,
+  }}
+>                 {/*  <Button
                     fullWidth
                     variant="contained"
                     startIcon={<LaunchIcon />}
@@ -172,7 +204,7 @@ const Projects = () => {
                   >
                     Live
                   </Button>
-
+*/}
                   <Button
                     fullWidth
                     variant="outlined"
@@ -181,7 +213,7 @@ const Projects = () => {
                   >
                     Code
                   </Button>
-                </Stack>*/}
+                </Stack>
               </Box>
             </MotionCard>
           ))}
