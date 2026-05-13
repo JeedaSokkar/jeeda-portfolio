@@ -16,7 +16,7 @@ import shopverseImg from "../../img/shopverse.png";
 import Math4Joy from "../../img/Math4Joy.png";
 import LMSImage from "../../img/LMSImage.png";
 import ShopOnlineMain from "../../img/ShopOnlineMain.png";
-import Shop from "../../img/ShopMain.png"
+import Shop from "../../img/ShopMain.png";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LaunchIcon from "@mui/icons-material/Launch";
 
@@ -47,35 +47,36 @@ const Projects = () => {
       github: "#",
       live: "#",
     },
-{
-  title: "Library Management System (LMS)",
-  description:
-    "A web-based library management system designed to simplify book search, borrowing, and return processes. The platform helps students quickly check book availability while enabling librarians to efficiently manage books, categories, and user records through an organized and user-friendly interface.",
-  image: LMSImage,
-  tech: ["React.js", "MUI", "JavaScript", "API Integration"],
-  color: "#8B5CF6",
-  github: "https://github.com/JeedaSokkar/Library-Management-System.git",
-  live: "#",
-},
-{
-  title: "Online-Shop",
-  description:
-  "A responsive e-commerce web application built with React and Bootstrap, featuring product browsing, category filtering, and API integration for dynamic data handling." , 
-   image:ShopOnlineMain,
-  tech: ["React.js", "Bootstrap", "CSS", "API Integration"],
-  color: "#d7c5ff",
-  github: "https://github.com/JeedaSokkar/Online-Shop",
-  live: "#",
-}
-,{
-  title: "Tech-Shop Hub", 
-  description: "A multi-page electronics e-commerce interface designed with a focus on clean navigation and categorized product layouts. Built using Bootstrap 5 to ensure a fully responsive experience.",
-  image: Shop,
-  tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5"], 
-  color: "#451f97",
-  github: "https://github.com/JeedaSokkar/Shop",
-  live: "#",
-}
+    {
+      title: "Library Management System (LMS)",
+      description:
+        "A web-based library management system designed to simplify book search, borrowing, and return processes. The platform helps students quickly check book availability while enabling librarians to efficiently manage books, categories, and user records through an organized and user-friendly interface.",
+      image: LMSImage,
+      tech: ["React.js", "MUI", "JavaScript", "API Integration"],
+      color: "#8B5CF6",
+      github: "https://github.com/JeedaSokkar/Library-Management-System.git",
+      live: "#",
+    },
+    {
+      title: "Online-Shop",
+      description:
+        "A responsive e-commerce web application built with React and Bootstrap, featuring product browsing, category filtering, and API integration for dynamic data handling.",
+      image: ShopOnlineMain,
+      tech: ["React.js", "Bootstrap", "CSS", "API Integration"],
+      color: "#d7c5ff",
+      github: "https://github.com/JeedaSokkar/Online-Shop",
+      live: "#",
+    },
+    {
+      title: "Tech-Shop Hub",
+      description:
+        "A multi-page electronics e-commerce interface designed with a focus on clean navigation and categorized product layouts. Built using Bootstrap 5 to ensure a fully responsive experience.",
+      image: Shop,
+      tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap 5"],
+      color: "#451f97",
+      github: "https://github.com/JeedaSokkar/Shop",
+      live: "#",
+    },
   ];
 
   return (
@@ -105,33 +106,33 @@ const Projects = () => {
           }}
         >
           {projects.map((project, i) => (
-          <MotionCard
-  key={i}
-  whileHover={{ y: -6 }}
-  sx={{
-    borderRadius: 2,
-    overflow: "hidden",
-    background: "rgba(15,23,42,0.7)",
-    border: "1px solid rgba(255,255,255,0.08)",
-    backdropFilter: "blur(10px)",
+            <MotionCard
+              key={i}
+              whileHover={{ y: -6 }}
+              sx={{
+                borderRadius: 2,
+                overflow: "hidden",
+                background: "rgba(15,23,42,0.7)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                backdropFilter: "blur(10px)",
 
-    display: "flex",
-    flexDirection: "column",
-    height: "100%",
-    "&:hover": {
-  borderColor: project.color,
-  boxShadow: `0 0 30px ${project.color}33`,
-},
-  }}
->
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+                "&:hover": {
+                  borderColor: project.color,
+                  boxShadow: `0 0 30px ${project.color}33`,
+                },
+              }}
+            >
               {/* IMAGE */}
               <Box
                 sx={{
-    height: 220,
-    cursor: "pointer",
-    overflow: "hidden",
-    position: "relative",
-  }}
+                  height: 220,
+                  cursor: "pointer",
+                  overflow: "hidden",
+                  position: "relative",
+                }}
                 onClick={() => {
                   setSelectedImage(project.image);
                   setOpen(true);
@@ -147,32 +148,31 @@ const Projects = () => {
                     transition: "0.5s",
                     "&:hover": { transform: "scale(1.1)" },
                   }}
-                  
                 />
-
               </Box>
 
-            
-             <Box
-  sx={{
-    p: 4,
-    display: "flex",
-    flexDirection: "column",
-    flexGrow: 1,
-  }}
->
+              <Box
+                sx={{
+                  p: 4,
+                  display: "flex",
+                  flexDirection: "column",
+                  flexGrow: 1,
+                }}
+              >
                 <Typography variant="h5" sx={{ color: "#fff", mb: 1 }}>
                   {project.title}
                 </Typography>
 
-<Typography
-  sx={{
-    color: "#94A3B8",
-    mb: 2,
-    lineHeight: 1.8,
-    minHeight: 120,
-  }}
->                  {project.description}
+                <Typography
+                  sx={{
+                    color: "#94A3B8",
+                    mb: 2,
+                    lineHeight: 1.8,
+                    minHeight: 120,
+                  }}
+                >
+                  {" "}
+                  {project.description}
                 </Typography>
 
                 <Stack direction="row" flexWrap="wrap" gap={1}>
@@ -189,14 +189,16 @@ const Projects = () => {
                   ))}
                 </Stack>
 
-<Stack
-  direction="row"
-  spacing={2}
-  sx={{
-    mt: "auto",
-    pt: 3,
-  }}
->                 {/*  <Button
+                <Stack
+                  direction="row"
+                  spacing={2}
+                  sx={{
+                    mt: "auto",
+                    pt: 3,
+                  }}
+                >
+                  {" "}
+                  {/*  <Button
                     fullWidth
                     variant="contained"
                     startIcon={<LaunchIcon />}
