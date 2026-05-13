@@ -38,7 +38,8 @@ function Navbar() {
       elevation={0}
       sx={{
         background: "transparent",
-        py: 3,
+        py: 4,
+      marginY:"6px"
       }}
     >
       <Container maxWidth="xl">
