@@ -81,7 +81,7 @@ export default function Contact() {
           maxWidth: 650,
           mx: "auto",
           mt: 2,
-          mb: 8,
+          mb: 4,
           color: "#94A3B8",
           lineHeight: 1.8,
         }}

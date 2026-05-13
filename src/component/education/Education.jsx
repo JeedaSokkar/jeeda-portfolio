@@ -30,7 +30,6 @@ export default function Education() {
         position: "relative",
       }}
     >
-      {/* HEADER */}
       <Box sx={{ textAlign: "center", mb: 8 }}>
         <Typography
           sx={{
