@@ -195,7 +195,6 @@ const HeroSection = () => {
               transition={{ delay: 0.9 }}
             >
               <Stack direction="row" spacing={2} mb={4}>
-                {/* PRIMARY CTA */}
                 <Button
                   variant="contained"
                   sx={{
@@ -217,7 +216,6 @@ const HeroSection = () => {
                   View My Work
                 </Button>
 
-                {/* SECONDARY CTA */}
                 <Button
                   variant="outlined"
                   sx={{
@@ -291,7 +289,7 @@ const HeroSection = () => {
             </Box>
 
             <Avatar
-              src="/profile.png"
+              src="../../../src/img/Jeeda.jpeg"
               sx={{
                 width: "78%",
                 height: "78%",

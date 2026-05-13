@@ -12,13 +12,12 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 
 const pages = [
-  "Home",
-  "About",
-  "Skills",
-  
-  "Projects",
-  "Education",
-  "Contact",
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Skills", id: "skills" },
+  { name: "Projects", id: "projects" },
+  { name: "Education", id: "education" },
+  { name: "Contact", id: "contact" },
 ];
 
 function Navbar() {
@@ -32,15 +31,29 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
+    handleCloseNavMenu();
+  };
+
   return (
     <AppBar
       position="static"
       elevation={0}
       sx={{
         background: "transparent",
-        py: 4,
-      marginY:"6px"
+        py: 2,
+        zIndex: 999,
+     
       }}
+      
     >
       <Container maxWidth="xl">
         <Toolbar
@@ -105,8 +118,11 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  {page}
+                <MenuItem
+                  key={page.id}
+                  onClick={() => handleScroll(page.id)}
+                >
+                  {page.name}
                 </MenuItem>
               ))}
             </Menu>
@@ -122,7 +138,8 @@ function Navbar() {
           >
             {pages.map((page, index) => (
               <Button
-                key={page}
+                key={page.id}
+                onClick={() => handleScroll(page.id)}
                 sx={{
                   color: "#CBD5E1",
                   px: 3,
@@ -146,7 +163,7 @@ function Navbar() {
                   },
                 }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
@@ -154,6 +171,7 @@ function Navbar() {
           {/* RIGHT BUTTON */}
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <Button
+              onClick={() => handleScroll("contact")}
               sx={{
                 background:
                   "linear-gradient(135deg, #06B6D4 0%, #C084FC 100%)",
@@ -172,7 +190,7 @@ function Navbar() {
                 },
               }}
             >
-              Let&apos;s talk
+              Let&apos;s Talk
             </Button>
           </Box>
         </Toolbar>
