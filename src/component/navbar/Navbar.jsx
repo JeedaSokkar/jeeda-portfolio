@@ -15,7 +15,7 @@ const pages = [
   "Home",
   "About",
   "Skills",
-  "Experience",
+  
   "Projects",
   "Education",
   "Contact",

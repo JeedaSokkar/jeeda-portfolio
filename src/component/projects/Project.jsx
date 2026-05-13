@@ -90,7 +90,7 @@ const Projects = () => {
             textAlign: "center",
           }}
         >
-          <Typography sx={{ color: "#8B5CF6" }}>PORTFOLIO</Typography>
+          <Typography sx={{ color: "#8B5CF6" }}>SELECTED WORK</Typography>
 
           <Typography variant="h2" sx={{ color: "#fff", fontWeight: 800 }}>
             Featured Projects
