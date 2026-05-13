@@ -170,7 +170,6 @@ const HeroSection = () => {
               JEEDA SOKKAR | Frontend Developer & Computer Systems Engineer{" "}
             </MotionTypography>
 
-            {/* DESCRIPTION */}
             <MotionTypography
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -235,7 +234,7 @@ const HeroSection = () => {
                       transform: "translateY(-4px)",
                     },
                   }}
-                  href="/cv.pdf"
+                  href="/public/JeedaSokkar_CV.pdf"
                 >
                   Download CV
                 </Button>
@@ -256,7 +255,7 @@ const HeroSection = () => {
               justifyContent: "center",
             }}
           >
-            {/* GLOW EFFECT */}
+
             <Box
               sx={{
                 position: "absolute",
@@ -270,7 +269,6 @@ const HeroSection = () => {
               }}
             />
 
-            {/* ROTATING BORDER */}
             <Box
               sx={{
                 position: "absolute",
@@ -292,7 +290,6 @@ const HeroSection = () => {
               />
             </Box>
 
-            {/* PROFILE IMAGE */}
             <Avatar
               src="/profile.png"
               sx={{
@@ -305,7 +302,6 @@ const HeroSection = () => {
               }}
             />
 
-            {/* TECH TAGS (معدلة + أقرب ومتوازنة) */}
             {[
               { name: "React.js", top: 25, left: 10 },
               { name: "MUI", top: 70, right: 5 },
@@ -340,7 +336,6 @@ const HeroSection = () => {
         </Stack>
       </Container>
 
-      {/* KEYFRAMES */}
       <style>
         {`
           @keyframes spin {
