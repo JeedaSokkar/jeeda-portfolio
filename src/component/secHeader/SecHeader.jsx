@@ -14,7 +14,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 
 import { motion } from "framer-motion";
-
+import JeedaImg from "../../img/Jeeda.jpeg";
 const MotionBox = motion(Box);
 const MotionTypography = motion(Typography);
 
@@ -33,7 +33,6 @@ const HeroSection = () => {
         padding: "10px",
       }}
     >
-      {/* BACKGROUND LIGHTS - الأمواج الضوئية الخلفية */}
       <Box
         sx={{
           position: "absolute",
@@ -62,7 +61,6 @@ const HeroSection = () => {
         }}
       />
 
-      {/* GRID BACKGROUND - شبكة الخلفية */}
       <Box
         sx={{
           position: "absolute",
@@ -84,14 +82,12 @@ const HeroSection = () => {
           justifyContent="space-between"
           spacing={8}
         >
-          {/* LEFT SIDE - المحتوى النصي */}
           <MotionBox
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             sx={{ maxWidth: 650, zIndex: 2 }}
           >
-            {/* BADGE */}
             <MotionBox
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -288,17 +284,17 @@ const HeroSection = () => {
               />
             </Box>
 
-            <Avatar
-              src="../../../src/img/Jeeda.jpeg"
-              sx={{
-                width: "78%",
-                height: "78%",
-                zIndex: 2,
-                border: "3px solid rgba(255,255,255,0.12)",
-                boxShadow: "0 0 40px rgba(139,92,246,0.25)",
-                animation: "float 6s ease-in-out infinite",
-              }}
-            />
+           <Avatar
+  src={JeedaImg}
+  sx={{
+    width: "78%",
+    height: "78%",
+    zIndex: 2,
+    border: "3px solid rgba(255,255,255,0.12)",
+    boxShadow: "0 0 40px rgba(139,92,246,0.25)",
+    animation: "float 6s ease-in-out infinite",
+  }}
+/>
 
             {[
               { name: "React.js", top: 25, left: 10 },
